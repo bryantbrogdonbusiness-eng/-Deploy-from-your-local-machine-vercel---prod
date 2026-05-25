@@ -1,6 +1,7 @@
 import { Globe } from "lucide-react";
 import { Translator } from "@/components/translator";
 import { SignShopBanner } from "@/components/sign-shop-banner";
+import { AdUnit } from "@/components/ad-unit";
 
 export default function Home() {
   return (
@@ -39,8 +40,14 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Translator Component */}
+        {/* Ad unit — top (activates after AdSense approval) */}
+        <AdUnit format="horizontal" className="rounded-xl overflow-hidden opacity-80" />
+
+        {/* Translator */}
         <Translator />
+
+        {/* Ad unit — between translator and Sign Shop banner */}
+        <AdUnit format="auto" className="rounded-xl overflow-hidden opacity-80" />
 
         {/* Sign Shop Banner */}
         <SignShopBanner />
